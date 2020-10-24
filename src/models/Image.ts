@@ -5,7 +5,7 @@ import {
    ManyToOne,
    JoinColumn,
 } from "typeorm";
-import Orphanage from "./Orphanage";
+import TrashPoint from "./TrashPoint";
 
 @Entity("images")
 export default class Image {
@@ -15,7 +15,7 @@ export default class Image {
    @Column()
    path: string;
 
-   @ManyToOne(() => Orphanage, (orphanage) => orphanage.images)
-   @JoinColumn({ name: "orphanage_id" })
-   orphanage: Orphanage;
+   @ManyToOne(() => TrashPoint, (trashpoint) => trashpoint.images)
+   @JoinColumn({ name: "trashpoint_id" })
+   trashpoint: TrashPoint;
 }

@@ -2,17 +2,18 @@ import { Router } from "express";
 import multer from "multer";
 
 import uploadConfig from "./config/upload";
-import OrphanagesController from "./controllers/OrphanagesController";
+import TrashPointController from "./controllers/TrashPointController";
+import TrashPoint from "./models/TrashPoint";
 
 const routes = Router();
 const uploads = multer(uploadConfig);
 
-routes.get("/orphanages", OrphanagesController.index);
-routes.get("/orphanages/:id", OrphanagesController.show);
+routes.get("/trashpoint", TrashPointController.index);
+routes.get("/trashpoint/:id", TrashPointController.show);
 routes.post(
-   "/orphanages",
+   "/trashpoint",
    uploads.array("images"),
-   OrphanagesController.create
+   TrashPointController.create
 );
 
 export default routes;
