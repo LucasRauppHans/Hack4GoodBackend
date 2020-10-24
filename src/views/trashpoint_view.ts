@@ -11,8 +11,9 @@ export default {
          longitude: trashpoint.longitude,
          description: trashpoint.description,
          assignee: trashpoint.assignee,
-         assigneeContact :trashpoint.assigneeContact,
+         assigneeContact: trashpoint.assigneeContact,
          severity: trashpoint.severity,
+         progress: trashpoint.progress,
          images: imagesView.renderMany(trashpoint.images),
       };
    },
