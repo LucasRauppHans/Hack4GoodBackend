@@ -10,6 +10,7 @@ const uploads = multer(uploadConfig);
 
 routes.get("/trashpoint", TrashPointController.index);
 routes.get("/trashpoint/:id", TrashPointController.show);
+routes.put("/trashpoint/:id", TrashPointController.update);
 routes.post(
    "/trashpoint",
    uploads.array("images"),
